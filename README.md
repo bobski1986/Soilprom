@@ -7,3 +7,4 @@ These models should inlcude biological elements as receptors of chemical polluti
 2) Change in biological endpoints will be modelled for each of the pollutant group
 ## Establishing a link between soil functions
 ## Linking affected soil functions to ecosystem services
+![Simple Pathway Flowchart](images/simple_pathway_flowchart.svg)
