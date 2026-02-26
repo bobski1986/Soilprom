@@ -1,0 +1,208 @@
+<svg viewBox="0 0 800 1400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define gradients and styles -->
+  <defs>
+    <!-- Gradient for boxes -->
+    <linearGradient id="boxGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="boxGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="boxGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="boxGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="boxGradient5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="boxGradient6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#30cfd0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#330867;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Arrow marker -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#667eea" />
+    </marker>
+    
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="4" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge> 
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    Integrated Impact Pathway
+  </text>
+  <text x="400" y="80" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#7f8c8d">
+    Chemical Pollution → Earthworms → Soil Structure → Ecosystem Services
+  </text>
+  
+  <!-- Stage 1: Chemical Exposure -->
+  <rect x="200" y="120" width="400" height="120" rx="15" fill="url(#boxGradient1)" filter="url(#shadow)"/>
+  <text x="400" y="160" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">
+    Chemical Exposure
+  </text>
+  <text x="400" y="190" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="white">
+    Concentration (mg/kg soil)
+  </text>
+  <text x="230" y="220" font-family="Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.9)">
+    • Soil contamination level
+  </text>
+  
+  <!-- Arrow 1 -->
+  <line x1="400" y1="240" x2="400" y2="300" stroke="#667eea" stroke-width="4" marker-end="url(#arrowhead)" stroke-dasharray="8,4">
+    <animate attributeName="stroke-dashoffset" from="0" to="24" dur="2s" repeatCount="indefinite"/>
+  </line>
+  <text x="440" y="275" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="#667eea">
+    Toxicity
+  </text>
+  
+  <!-- Stage 2: MSAR Model -->
+  <rect x="200" y="300" width="400" height="120" rx="15" fill="url(#boxGradient2)" filter="url(#shadow)"/>
+  <text x="400" y="340" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">
+    MSAR Model
+  </text>
+  <text x="400" y="370" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="white">
+    MSA Reduction (0-100%)
+  </text>
+  <text x="230" y="400" font-family="Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.9)">
+    • Mean Species Abundance decline
+  </text>
+  
+  <!-- Arrow 2 -->
+  <line x1="400" y1="420" x2="400" y2="480" stroke="#667eea" stroke-width="4" marker-end="url(#arrowhead)" stroke-dasharray="8,4">
+    <animate attributeName="stroke-dashoffset" from="0" to="24" dur="2s" repeatCount="indefinite"/>
+  </line>
+  <text x="440" y="455" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="#667eea">
+    Population
+  </text>
+  
+  <!-- Stage 3: Biomass Reduction -->
+  <rect x="200" y="480" width="400" height="120" rx="15" fill="url(#boxGradient3)" filter="url(#shadow)"/>
+  <text x="400" y="520" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">
+    Biomass Reduction
+  </text>
+  <text x="400" y="550" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="white">
+    Earthworm Biomass (g/m²)
+  </text>
+  <text x="230" y="580" font-family="Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.9)">
+    • Community biomass decline
+  </text>
+  
+  <!-- Arrow 3 -->
+  <line x1="400" y1="600" x2="400" y2="660" stroke="#667eea" stroke-width="4" marker-end="url(#arrowhead)" stroke-dasharray="8,4">
+    <animate attributeName="stroke-dashoffset" from="0" to="24" dur="2s" repeatCount="indefinite"/>
+  </line>
+  <text x="440" y="635" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="#667eea">
+    Activity
+  </text>
+  
+  <!-- Stage 4: Bioturbation Rate Decrease -->
+  <rect x="200" y="660" width="400" height="120" rx="15" fill="url(#boxGradient4)" filter="url(#shadow)"/>
+  <text x="400" y="700" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">
+    Bioturbation Rate Decrease
+  </text>
+  <text x="400" y="730" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="white">
+    τₛ (year⁻¹)
+  </text>
+  <text x="230" y="760" font-family="Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.9)">
+    • Reduced soil mixing and casting
+  </text>
+  
+  <!-- Arrow 4 -->
+  <line x1="400" y1="780" x2="400" y2="840" stroke="#667eea" stroke-width="4" marker-end="url(#arrowhead)" stroke-dasharray="8,4">
+    <animate attributeName="stroke-dashoffset" from="0" to="24" dur="2s" repeatCount="indefinite"/>
+  </line>
+  <text x="440" y="815" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="#667eea">
+    Physical
+  </text>
+  
+  <!-- Stage 5: Soil Structure Degradation -->
+  <rect x="200" y="840" width="400" height="120" rx="15" fill="url(#boxGradient5)" filter="url(#shadow)"/>
+  <text x="400" y="880" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">
+    Soil Structure Degradation
+  </text>
+  <text x="400" y="910" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="white">
+    Porosity Loss (φₘₐ𝒸, φₘₑₛ, φₘᵢ𝒸)
+  </text>
+  <text x="230" y="940" font-family="Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.9)">
+    • Macropore collapse, compaction
+  </text>
+  
+  <!-- Arrow 5 -->
+  <line x1="400" y1="960" x2="400" y2="1020" stroke="#667eea" stroke-width="4" marker-end="url(#arrowhead)" stroke-dasharray="8,4">
+    <animate attributeName="stroke-dashoffset" from="0" to="24" dur="2s" repeatCount="indefinite"/>
+  </line>
+  <text x="440" y="995" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="#667eea">
+    Function
+  </text>
+  
+  <!-- Stage 6: Ecosystem Service Impacts -->
+  <rect x="200" y="1020" width="400" height="160" rx="15" fill="url(#boxGradient6)" filter="url(#shadow)"/>
+  <text x="400" y="1060" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">
+    Ecosystem Service Impacts
+  </text>
+  <text x="230" y="1095" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.95)">
+    • Water infiltration ↓
+  </text>
+  <text x="230" y="1120" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.95)">
+    • Water holding capacity (WHC) ↓
+  </text>
+  <text x="230" y="1145" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.95)">
+    • Soil aeration ↓
+  </text>
+  <text x="230" y="1170" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.95)">
+    • Nutrient cycling ↓
+  </text>
+  
+  <!-- Side labels for model frameworks -->
+  <rect x="50" y="300" width="120" height="40" rx="20" fill="#667eea" opacity="0.9"/>
+  <text x="110" y="325" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+    MSAR Model
+  </text>
+  
+  <rect x="50" y="840" width="120" height="40" rx="20" fill="#667eea" opacity="0.9"/>
+  <text x="110" y="860" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+    Meurer
+  </text>
+  <text x="110" y="875" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+    Model
+  </text>
+  
+  <!-- Framework info box -->
+  <rect x="50" y="1250" width="700" height="120" rx="15" fill="#2c3e50" opacity="0.95"/>
+  <text x="400" y="1280" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
+    Coupled MSAR-Meurer Framework
+  </text>
+  <text x="400" y="1310" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ecf0f1">
+    This integrated pathway links chemical contamination to ecosystem function
+  </text>
+  <text x="400" y="1335" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ecf0f1">
+    through mechanistic models of earthworm populations (Hendriks 2005) and
+  </text>
+  <text x="400" y="1355" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ecf0f1">
+    soil structure dynamics (Meurer et al. 2020)
+  </text>
+</svg>
