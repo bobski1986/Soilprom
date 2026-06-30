@@ -1,0 +1,61 @@
+---
+title: "Analysing pollutant impact on soil functions with Bayesian Networks"
+format: html
+editor: visual
+---
+
+```{r Load packages, include=FALSE}
+pkg <- c("bnlearn", "tidyverse")
+
+for (p in pkg) {
+  if (!requireNamespace(p, quietly = TRUE)) {
+    install.packages(p)
+  }
+}
+
+lapply(pkg, library, character.only = T)
+```
+
+There are two unique components that when taken together represent **Bayesian Networks (BN)**: **graphical** and **probabilistic**.
+
+# Graphical representation
+
+Relationships between variables in Bayesian nets (BN**)** are represented by arcs. Pairs of variables connected by arcs are **directly** dependent. Variables encoded in the BN are called **nodes**, further, **parent** and child nodes are distinguished to describe the **dependency** between variables. Therefor the pair A ⟶ B encodes dependency of child node B on parent node A. This dependency does not however equal causality. Cyclic dependencies such as A ⟶ B ⟶ A are not allowed, for that reason Bayesian Networks are **acyclic**. Direct and acyclic characteristics are main features of graphical representation of relationships between nodes in Bayesian Networks also called Directed Acyclic Graphs.
+
+Create empty graph with arcs
+
+```{r}
+dag <- empty.graph(nodes = c("A", "S", "E", "O", "R", "T"))
+arc.set <- matrix(c("A", "E",
+                    "S", "E",
+                    "E", "O",
+                    "E", "R",
+                    "O", "T",
+                    "R", "T"),
+                  byrow = T, 
+                  ncol = 2,
+                  dimnames = list(NULL, c("from", "to")))
+arcs(dag) <- arc.set
+```
+
+Recall a product of conditional probabilities
+
+```{r}
+modelstring(dag)
+```
+
+Recall nodes
+
+```{r}
+nodes(dag)
+```
+
+Recall arcs
+
+```{r}
+arcs(dag)
+```
+
+# Probabilistic representation
+
+Variables are assigned with states or levels which are then combined according to dependencies between nodes encoded by arcs in the model. Each combination between variables' states is assigned a probability distribution and all combinations form joint probability distribution.
